@@ -1,6 +1,6 @@
 export const SITE = {
-	title: 'Documentation',
-	description: 'Your website description.',
+	title: 'Astro Tree',
+	description: 'I will murder a child.',
 	defaultLanguage: 'en_US',
 };
 
