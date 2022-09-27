@@ -30,9 +30,9 @@ export const KNOWN_LANGUAGES = {
 } as const;
 export const KNOWN_LANGUAGE_CODES = Object.values(KNOWN_LANGUAGES);
 
-export const GITHUB_EDIT_URL = `https://github.com/withastro/astro/tree/main/examples/docs`;
+export const GITHUB_EDIT_URL = `https://github.com/BaghoulStein/astro-tree`;
 
-export const COMMUNITY_INVITE_URL = `https://astro.build/chat`;
+export const COMMUNITY_INVITE_URL = `https://discord.gg/2kRSVjfpWb`;
 
 // See "Algolia" section of the README for more information.
 export const ALGOLIA = {
@@ -49,8 +49,8 @@ export const SIDEBAR: Sidebar = {
 	en: {
 		'Mandatory Basics': [
 			{ text: 'Syntax', link: 'en/syntax' },
-			{ text: 'Page 3', link: 'en/page-3' },
-		],
-		'Non-Mandatory Topics': [{ text: 'Page 4', link: 'en/page-4' }],
+			// { text: 'Page 3', link: 'en/page-3' },
+		]
+		// 'Non-Mandatory Topics': [{ text: 'Page 4', link: 'en/page-4' }],
 	},
 };
