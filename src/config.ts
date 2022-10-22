@@ -27,6 +27,7 @@ export type Frontmatter = {
 
 export const KNOWN_LANGUAGES = {
 	English: 'en',
+	// Hebrew: 'he',
 } as const;
 export const KNOWN_LANGUAGE_CODES = Object.values(KNOWN_LANGUAGES);
 
@@ -47,8 +48,10 @@ export type Sidebar = Record<
 >;
 export const SIDEBAR: Sidebar = {
 	en: {
-		'Mandatory Basics': [
-			{ text: 'Syntax', link: 'en/syntax' },
+		'Basics': [
+			{ text: 'Data Types', link: 'en/data-types' },
+			{ text: 'If statements', link: 'en/if-statements'},
+			{ text: 'Loops', link: 'en/loops'}
 			// { text: 'Page 3', link: 'en/page-3' },
 		]
 		// 'Non-Mandatory Topics': [{ text: 'Page 4', link: 'en/page-4' }],

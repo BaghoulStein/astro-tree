@@ -12,7 +12,7 @@ In this page we go over basic python syntax, and some logic fallacies that need 
 For now, we will start off with Python due to it's simple syntax that's similar to English.
 
 ### 1.1 Hello World
-To get started, invoke the interperter by writing ```Python``` in the terminal, and write the following line:<br><p style="text-align: center; font-size: 125%;"><span style="color: #85EA85"> ```Print```</span><```("Hello World")```</p>
+To get started, invoke the interperter by writing ```Python``` in the terminal, and write the following line:<br><p style="text-align: center; font-size: 125%;"><span style="color: #85EA85"> ```print```</span>```("Hello World")```</p>
 
 ...And congratulations on writing your first line of Python code.
 
