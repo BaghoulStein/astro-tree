@@ -50,7 +50,7 @@ export const SIDEBAR: Sidebar = {
 	en: {
 		'Basics': [
 			{ text: 'Data Types', link: 'en/data-types' },
-			{ text: 'If statements', link: 'en/if-statements'},
+			{ text: 'If Statements', link: 'en/if-statements'},
 			{ text: 'Loops', link: 'en/loops'}
 			// { text: 'Page 3', link: 'en/page-3' },
 		]
