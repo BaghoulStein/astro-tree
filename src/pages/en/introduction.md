@@ -7,6 +7,7 @@ layout: ../../layouts/MainLayout.astro
 **Welcome to Mariners (and the programming team, hopefully.)!**
 
 This is the programming team docs site, including mandatory and non-mandatory materials. Fun project ideas to start on, and our team's library.
+The site is based on Java.
 The site includes:
 
 - ✅ **Full Markdown support**
@@ -16,5 +17,5 @@ The site includes:
 
 ## Getting Started
 
-Head towards section 1 ( Syntax ) and read the document. 
+Head towards section 1 ( Data Types ) and read the document. 
 Afterwards, head down towards the projects page, complete the mandatory missions and submit it.

@@ -53,6 +53,9 @@ export const SIDEBAR: Sidebar = {
 			{ text: 'If Statements', link: 'en/if-statements'},
 			{ text: 'Loops', link: 'en/loops'}
 			// { text: 'Page 3', link: 'en/page-3' },
+		],
+		'OOP' : [
+			{ text: 'Classes', link: 'en/classes' }
 		]
 		// 'Non-Mandatory Topics': [{ text: 'Page 4', link: 'en/page-4' }],
 	},

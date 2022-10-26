@@ -1,0 +1,54 @@
+---
+title: Classes
+description: Classes - OOP
+layout: ../../layouts/MainLayout.astro
+---
+
+Java is an object-oriented programming langauge.
+
+Everything in Java is associated with classes and objects, along with its attributes and methods. For example: in real life, a car is an object. The car has attributes, such as weight and color, and methods, such as drive and brake. 
+
+A Class is like an object constructor, or a "blueprint" for creating objects.
+
+### Creating a class
+```
+public class Number
+{
+  int x = 5;
+}
+```
+
+### Creating an Object
+In Java, an object is created from a class. We have already created the class named ```Number```, so now we can use this to create objects.
+
+To create an object of ```Number```, specify the class name, followed by the object name, and use the keyword new:
+
+```
+public class Number
+{
+  int x = 5;
+}
+
+public static void main(String[] args)
+{
+  Number m_number = new Number();
+  System.out.println(m_number.x);
+} 
+```
+
+## Creating multiple objects
+You can create multiple instances of one class.
+```
+public class Number
+{
+  int x = 5;
+}
+
+public static void main(String[] args)
+{
+  Number m_number1 = new Number();
+  Number m_number2 = new Number();
+  System.out.println(m_number1.x);
+  System.out.println(m_number2.x);
+} 
+```
