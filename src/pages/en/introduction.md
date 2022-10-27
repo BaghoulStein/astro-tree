@@ -17,5 +17,5 @@ The site includes:
 
 ## Getting Started
 
-Head towards section 1 ( Data Types ) and read the document. 
+Head towards section 1 ( Data Types ) and read the document.
 Afterwards, head down towards the projects page, complete the mandatory missions and submit it.

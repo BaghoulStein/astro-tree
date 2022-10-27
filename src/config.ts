@@ -1,12 +1,12 @@
 export const SITE = {
-	title: 'Astro Tree',
+	title: 'Mariners Programming Repo',
 	description: 'I will murder a child.',
 	defaultLanguage: 'en_US',
 };
 
 export const OPEN_GRAPH = {
 	image: {
-		src: 'https://github.com/withastro/astro/blob/main/assets/social/banner.jpg?raw=true',
+		src: 'https://imgur.com/ntFP8Yt?raw=true',
 		alt:
 			'astro logo on a starry expanse of space,' +
 			' with a purple saturn-like planet floating in the right foreground',
@@ -51,7 +51,9 @@ export const SIDEBAR: Sidebar = {
 		'Basics': [
 			{ text: 'Data Types', link: 'en/data-types' },
 			{ text: 'If Statements', link: 'en/if-statements'},
-			{ text: 'Loops', link: 'en/loops'}
+			{ text: 'Loops', link: 'en/loops'},
+			{ text: "Functions", link: 'en/functions'},
+			{ text: 'Excersises', link: 'en/basic-excersises'},
 			// { text: 'Page 3', link: 'en/page-3' },
 		],
 		'OOP' : [

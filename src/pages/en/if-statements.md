@@ -11,7 +11,7 @@ If statements are catogorized to 3 blocks. If, Else-If, and Else.
 
 ### The "if" Block
 
-```
+```java
 if ((condition) == true)
 {
   * code to run *
@@ -20,7 +20,7 @@ if ((condition) == true)
 
 An example for that:
 
-``` 
+``` java
 int score = 95;
 
 if (score => 90) {
@@ -32,14 +32,15 @@ if (score => 90) {
 
 The else block is used to exectue a piece of code if a condition is false.
 
-```
+```java
 else {
   * code to run *
 }
 ```
 
 Extending our previous example we can say:
-```
+
+```java
 else {
   System.out.println("You did not get an A, better luck next time!");
 }
@@ -49,7 +50,7 @@ else {
 
 The else if block is used to check if _another_ statement is true after the first statement is determined to be **false**.
 
-```
+```java
 if (condition)
 {
   * code to run *
@@ -60,7 +61,8 @@ if (condition)
 ```
 
 If we were to extend our previous to accommodate for B grades we would do the following:
-```
+
+```java
 int score = 85;
 
 if (score => 90)
@@ -84,26 +86,32 @@ Almost all boolean operators can be expressed in a mathematical statement
 
 The and operator evaluates to true whenever the two boolean values on either side of it are also true.
 
-```
+```java
 (Condition) && (Condition) == (Condition) * (Condition)
 if result == 1 true else false
 ```
+
 ### Or ( || )
 
 The or operator evaluates to true if either of the two boolean values on either side of it is true.
-```
+
+```java
 (Condition) || (Condition) == (Condition) + (Condition)
 if result => 1 true else false
 ```
+
 ### Not ( ! )
 
 In addition to operating on two boolean values, you can also calculate the opposite of a single boolean value. The opposite of true is false, and the opposite of false is true.
-```
+
+```java
 !(Condition) = Opposite of (Condition)
 ```
+
 ### Combining Operators
 
 You can also combine these operators to form more complicated logic. So you can do things like this:
-```
+
+```java
 boolean isMammal = !canSwim && !canFly;
 ```
