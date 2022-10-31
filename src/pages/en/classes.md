@@ -6,7 +6,7 @@ layout: ../../layouts/MainLayout.astro
 
 Java is an object-oriented programming langauge.
 
-Everything in Java is associated with classes and objects, along with its attributes and methods. For example: in real life, a car is an object. The car has attributes, such as weight and color, and methods, such as drive and brake.
+Everything in Java is associated with classes and objects, along with its attributes and functions. For example: in real life, a car is an object. The car has attributes, such as weight and color, and functions, such as drive and brake.
 
 A Class is like an object constructor, or a "blueprint" for creating objects.
 
@@ -71,4 +71,79 @@ public class TwoNumbers
 }
 ```
 
-## Class Methods
+## Static vs Public
+
+You will often see Java programs that contain either [```static```](#access-modifiers) or [```public```](#access-modifiers) attributes and methods.
+
+In the example above, we created a static method, which means that it can be accessed without creating an object of the class unlike [```public```](#access-modifiers), which can only be accessed by objects:
+
+```java
+public class Main {
+  // Static method
+  static void myStaticMethod() {
+    System.out.println("Static methods can be called without creating objects");
+  }
+
+  // Public method
+  public void myPublicMethod() {
+    System.out.println("Public methods must be called by creating objects");
+  }
+
+  // Main method
+  public static void main(String[] args) {
+    myStaticMethod(); // Call the static method
+    // myPublicMethod(); This would compile an error
+
+    Main myObj = new Main(); // Create an object of Main
+    myObj.myPublicMethod(); // Call the public method on the object
+  }
+}
+```
+
+## Constructors
+
+A constructor is a special method that is used to initialize objects. The constructor is called when an object of a class is created. It can be used to set initial values for object attributes.
+
+```java
+public class Main {
+  int x;
+
+  public Main() {
+    x = 5;
+  }
+
+  public static void main(Stringp[] args) {
+    Main m_obj = new Main();
+    System.out.println(m_obj.x);
+  }
+}
+```
+
+* Output would be: 5
+
+### Constructor Parameters
+
+Constructors can also take parameters, which are used to initialize attributes.
+
+```java
+public class Main {
+  int x;
+
+  public Main(int y) {
+    this.x = y;
+  }
+
+  public static void Main(String[] args) {
+    Main m_obj = new Main(10);
+    System.out.println(m_obj.x);
+  }
+}
+```
+
+* Output would be: 10
+
+## Access Modifiers
+
+* **Public** code is accessible from all classes.
+* **Private** code is only accessible from within the class.
+* **Protected** code is accessible only from within the class and it's _subclasses_

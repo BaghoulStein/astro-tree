@@ -28,7 +28,10 @@ const githubEditUrl = `${CONFIG.GITHUB_EDIT_URL}`;
 		<title>
 			{frontmatter.title ? `${frontmatter.title} 🚀` : `${frontmatter.title}`}
 		</title>
-		<style>
+		<style>	
+			html {
+				scroll-behavior: smooth;
+			}
 			body {
 				width: 100%;
 				display: grid;
