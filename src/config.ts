@@ -57,7 +57,9 @@ export const SIDEBAR: Sidebar = {
 			// { text: 'Page 3', link: 'en/page-3' },
 		],
 		'OOP' : [
-			{ text: 'Classes', link: 'en/classes' }
+			{ text: 'Classes', link: 'en/classes' },
+			{ text: 'Encapsulation', link: 'en/encapsulation'},
+			{ text: 'OOP Excersises', link: 'en/basic-oop-excersises'}
 		]
 		// 'Non-Mandatory Topics': [{ text: 'Page 4', link: 'en/page-4' }],
 	},

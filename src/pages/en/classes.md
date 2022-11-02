@@ -144,6 +144,39 @@ public class Main {
 
 ## Access Modifiers
 
+Access modifiers control the access level of the modified code.
+
 * **Public** code is accessible from all classes.
 * **Private** code is only accessible from within the class.
 * **Protected** code is accessible only from within the class and it's _subclasses_
+
+## Non-Access Modifiers
+
+Non-Access modifiers are used to provide additional functioanlity which does not interact with the access level. (Only relevant keywords are mentioned.)
+
+* **Final** code is neither inheritable nor overridable.
+* **Static** code belongs to the class, rather a specific object.
+* **Synchronized** code can only be accessed by one thread at a time.
+
+### Abstract
+
+An ```abstract``` method belongs to an ```abstract``` class, and it does not have a body. The body is provided by the subclass.
+
+```java
+abstract class Animal {
+  public abstract void makeSound();
+}
+
+public class Dog extends Animal {
+  public void makeSound() { System.out.println("Bark!"); }
+}
+
+public class Main {
+  public static void main(String[] args) { 
+    Dog m_dog = new Dog();
+    m_dog.makeSound();
+  }
+}
+```
+
+* Output would be: "Bark!"
