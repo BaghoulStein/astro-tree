@@ -52,6 +52,7 @@ export const SIDEBAR: Sidebar = {
 			{ text: 'Data Types', link: 'en/data-types' },
 			{ text: 'If Statements', link: 'en/if-statements'},
 			{ text: 'Loops', link: 'en/loops'},
+			{ text: 'Modifiers', link:'en/modifiers' },
 			{ text: "Functions", link: 'en/functions'},
 			{ text: 'Excersises', link: 'en/basic-excersises'},
 			// { text: 'Page 3', link: 'en/page-3' },
