@@ -61,7 +61,8 @@ export const SIDEBAR: Sidebar = {
 			{ text: 'Classes', link: 'en/classes' },
 			{ text: 'Encapsulation', link: 'en/encapsulation'},
 			{ text: 'Inheritance', link: 'en/inheritance'},
-			{ text: 'OOP Excersises', link: 'en/basic-oop-excersises'}
+			{ text: 'OOP Excersises', link: 'en/basic-oop-excersises'},
+			{ text: 'OOP First Project', link: 'en/oop-1-final'}
 		]
 		// 'Non-Mandatory Topics': [{ text: 'Page 4', link: 'en/page-4' }],
 	},
