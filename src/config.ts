@@ -60,6 +60,7 @@ export const SIDEBAR: Sidebar = {
 		'OOP' : [
 			{ text: 'Classes', link: 'en/classes' },
 			{ text: 'Encapsulation', link: 'en/encapsulation'},
+			{ text: 'Inheritance', link: 'en/inheritance'},
 			{ text: 'OOP Excersises', link: 'en/basic-oop-excersises'}
 		]
 		// 'Non-Mandatory Topics': [{ text: 'Page 4', link: 'en/page-4' }],
