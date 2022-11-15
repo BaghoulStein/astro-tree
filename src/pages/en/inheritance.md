@@ -103,7 +103,7 @@ public class Child extends Parent {
 }
 ```
 
-### Multileve inheritance
+### Multilevel inheritance
 
 Multilevel inheritance is when a child class inherits from a parent class which in turn inherits from another parent class.
 

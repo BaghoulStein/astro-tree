@@ -112,3 +112,26 @@ public class Main {
 ```
 
 * Output would be: 10
+
+## Abstract
+
+An ```abstract``` method belongs to an ```abstract``` class, and it does not have a body. The body is provided by the subclass.
+
+```java
+abstract class Animal {
+  public abstract void makeSound();
+}
+
+public class Dog extends Animal {
+  public void makeSound() { System.out.println("Bark!"); }
+}
+
+public class Main {
+  public static void main(String[] args) { 
+    Dog m_dog = new Dog();
+    m_dog.makeSound();
+  }
+}
+```
+
+* Output would be: "Bark!"

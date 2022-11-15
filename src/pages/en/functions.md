@@ -120,11 +120,11 @@ public class Main {
 Function overloading allows the programmer to define a function with the same name, but with different parameters.
 
 ```java
-static int plusMethodInt(int x, int y) {
+static int plusMethod(int x, int y) {
   return x + y;
 }
 
-static double plusMethodDouble(double x, double y) {
+static double plusMethod(double x, double y) {
   return x + y;
 }
 
