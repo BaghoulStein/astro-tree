@@ -135,5 +135,3 @@ Pay attention, the product in the store isn't just a name! A product has the att
 Pay attention, a Box isn't free! the price of the box is equal to the price of the product. Assuming the company has to create a custom box, the price will go up by 5 dollars.
 
 **Build a function called "GetPrice" that returns the final price of the package.**
-
-## WILL BE CONTINUED ON NOV. 16
