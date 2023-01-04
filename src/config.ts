@@ -63,7 +63,11 @@ export const SIDEBAR: Sidebar = {
 			{ text: 'Inheritance', link: 'en/inheritance'},
 			{ text: 'OOP Excersises', link: 'en/basic-oop-excersises'},
 			{ text: 'OOP First Project', link: 'en/oop-1-final'}
-		]
+		],
+        'WPILib' : [
+            { text: 'WPILib Basics', link: 'en/WPIlib/WPIlib-Basics' },
+			{ text: 'Commands', link: 'en/WPIlib/Commands' ,}
+        ]
 		// 'Non-Mandatory Topics': [{ text: 'Page 4', link: 'en/page-4' }],
 	},
 };
