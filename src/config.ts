@@ -66,7 +66,9 @@ export const SIDEBAR: Sidebar = {
 		],
         'WPILib' : [
             { text: 'WPILib Basics', link: 'en/WPIlib/WPIlib-Basics' },
-			{ text: 'Commands', link: 'en/WPIlib/Commands' ,}
+			{ text: 'Subsystems', link: 'en/WPIlib/Subsystems' ,},
+			{ text: 'Commands', link: 'en/WPIlib/Commands' ,},
+			// { text: 'IO', link: 'en/WPIlib/IO' ,},
         ]
 		// 'Non-Mandatory Topics': [{ text: 'Page 4', link: 'en/page-4' }],
 	},

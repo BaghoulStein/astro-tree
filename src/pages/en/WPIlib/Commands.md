@@ -68,3 +68,215 @@ CommandBase noninteruptible = Commands.run(intake::activate, intake).withInterru
 ```
 
 As a rule, command compositions are ```kCancelIncoming``` if all their components are ```kCancelIncoming``` as well.
+
+## Example Commands
+
+```java
+import edu.wpi.first.wpilibj.templates.commandbased.subsystems.ExampleSubsystem;
+
+import edu.wpi.first.wpilibj2.command.CommandBase;
+
+
+/** An example command that uses an example subsystem. */
+
+public class ExampleCommand extends CommandBase {
+
+  @SuppressWarnings({"PMD.UnusedPrivateField", "PMD.SingularField"})
+
+  private final ExampleSubsystem m_subsystem;
+
+
+  /**
+
+   * Creates a new ExampleCommand.
+
+   *
+
+   * @param subsystem The subsystem used by this command.
+
+   */
+
+  public ExampleCommand(ExampleSubsystem subsystem) {
+
+    m_subsystem = subsystem;
+
+    // Use addRequirements() here to declare subsystem dependencies.
+
+    addRequirements(subsystem);
+
+  }
+```
+
+```java
+package edu.wpi.first.wpilibj.examples.hatchbottraditional.commands;
+
+
+import edu.wpi.first.wpilibj.examples.hatchbottraditional.subsystems.HatchSubsystem;
+
+import edu.wpi.first.wpilibj2.command.CommandBase;
+
+
+/**
+
+ * A simple command that grabs a hatch with the {@link HatchSubsystem}. Written explicitly for
+
+ * pedagogical purposes. Actual code should inline a command this simple with {@link
+
+ * edu.wpi.first.wpilibj2.command.InstantCommand}.
+
+ */
+
+public class GrabHatch extends CommandBase {
+
+  // The subsystem the command runs on
+
+  private final HatchSubsystem m_hatchSubsystem;
+
+
+  public GrabHatch(HatchSubsystem subsystem) {
+
+    m_hatchSubsystem = subsystem;
+
+    addRequirements(m_hatchSubsystem);
+
+  }
+
+
+  @Override
+
+  public void initialize() {
+
+    m_hatchSubsystem.grabHatch();
+
+  }
+
+
+  @Override
+
+  public boolean isFinished() {
+
+    return true;
+
+  }
+
+}
+```
+Notice that the hatch subsystem used by the command is passed into the command through the command’s constructor. This is a pattern called dependency injection, and allows users to avoid declaring their subsystems as global variables. This is widely accepted as a best-practice - the reasoning behind this is discussed in a later section.
+
+Notice also that the above command calls the subsystem method once from initialize, and then immediately ends (as ```isFinished()``` simply returns true). This is typical for commands that toggle the states of subsystems, and as such it would be more succinct to write this command using the factories described above.
+
+What about a more complicated case? Below is a drive command, from the same example project:
+
+```java
+package edu.wpi.first.wpilibj.examples.hatchbottraditional.commands;
+
+
+import edu.wpi.first.wpilibj.examples.hatchbottraditional.subsystems.DriveSubsystem;
+
+import edu.wpi.first.wpilibj2.command.CommandBase;
+
+import java.util.function.DoubleSupplier;
+
+
+/**
+
+ * A command to drive the robot with joystick input (passed in as {@link DoubleSupplier}s). Written
+
+ * explicitly for pedagogical purposes - actual code should inline a command this simple with {@link
+
+ * edu.wpi.first.wpilibj2.command.RunCommand}.
+
+ */
+
+public class DefaultDrive extends CommandBase {
+
+  private final DriveSubsystem m_drive;
+
+  private final DoubleSupplier m_forward;
+
+  private final DoubleSupplier m_rotation;
+
+
+  /**
+
+   * Creates a new DefaultDrive.
+
+   *
+
+   * @param subsystem The drive subsystem this command wil run on.
+
+   * @param forward The control input for driving forwards/backwards
+
+   * @param rotation The control input for turning
+
+   */
+
+  public DefaultDrive(DriveSubsystem subsystem, DoubleSupplier forward, DoubleSupplier rotation) {
+
+    m_drive = subsystem;
+
+    m_forward = forward;
+
+    m_rotation = rotation;
+
+    addRequirements(m_drive);
+
+  }
+
+
+  @Override
+
+  public void execute() {
+
+    m_drive.arcadeDrive(m_forward.getAsDouble(), m_rotation.getAsDouble());
+
+  }
+
+}
+```
+
+and then usage:
+
+```java
+   // Configure default commands
+
+    // Set the default drive command to split-stick arcade drive
+
+    m_robotDrive.setDefaultCommand(
+
+        // A split-stick arcade command, with forward/backward controlled by the left
+
+        // hand, and turning controlled by the right.
+
+        new DefaultDrive(
+
+            m_robotDrive,
+
+            () -> -m_driverController.getLeftY(),
+
+            () -> -m_driverController.getRightX()));
+```
+
+Notice that this command does not override ```isFinished()```, and thus will never end; this is the norm for commands that are intended to be used as default commands. Once more, this command is rather simple and calls the subsystem method only from one place, and as such, could be more concisely written using factories:
+
+```java
+    // Configure default commands
+
+    // Set the default drive command to split-stick arcade drive
+
+    m_robotDrive.setDefaultCommand(
+
+        // A split-stick arcade command, with forward/backward controlled by the left
+
+        // hand, and turning controlled by the right.
+
+        Commands.run(
+
+            () ->
+
+                m_robotDrive.arcadeDrive(
+
+                    -m_driverController.getLeftY(), -m_driverController.getRightX()),
+
+            m_robotDrive));
+```
